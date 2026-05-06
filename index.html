@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHMED.M | Graphic Designer</title>
+    <meta name="description"
+        content="Professional portfolio of AHMED.M — Creative Social Media Graphic Designer specializing in brand identity, product ads, and visual storytelling.">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="header">
+        <div class="logo">AHMED<span>.M</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-btn" id="menu-btn" aria-label="Open Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="close-nav" id="close-nav" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+        <ul>
+            <li><a href="#home" class="mob-link">Home</a></li>
+            <li><a href="#portfolio" class="mob-link">Portfolio</a></li>
+            <li><a href="#about" class="mob-link">About</a></li>
+            <li><a href="#contact" class="mob-link">Contact</a></li>
+        </ul>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section id="home" class="hero">
+            <!-- Depth layers -->
+            <div class="hero-grid-lines"></div>
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+
+            <div class="hero-content">
+                <div class="hero-badge reveal">
+                    <span class="badge-dot"></span> Available for work
+                </div>
+                <h1 class="hero-title reveal">
+                    <span class="title-line">Creative</span>
+                    <span class="title-line accent">Visual</span>
+                    <span class="title-line">Designer</span>
+                </h1>
+                <p class="hero-desc reveal">
+                    I craft bold brand identities, scroll-stopping ads & product visuals<br>
+                    that turn heads and drive results.
+                </p>
+                <div class="hero-ctas reveal">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <i class="fas fa-eye"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">
+                        <i class="fas fa-paper-plane"></i> Let's Talk
+                    </a>
+                </div>
+
+                <div class="hero-stats reveal">
+                    <div class="stat"><span class="stat-num">17+</span><span class="stat-label">Projects</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-num">1+</span><span class="stat-label">Year Exp.</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Passion</span></div>
+                </div>
+            </div>
+
+            <!-- Floating 3D Cube -->
+            <div class="hero-visual reveal">
+                <div class="cube-container">
+                    <div class="cube">
+                        <div class="face front">Design</div>
+                        <div class="face back">Create</div>
+                        <div class="face right">Inspire</div>
+                        <div class="face left">Build</div>
+                        <div class="face top">Art</div>
+                        <div class="face bottom">Vision</div>
+                    </div>
+                </div>
+                <div class="cube-shadow"></div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ===== PORTFOLIO / GALLERY ===== -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="section-header reveal">
+                <p class="section-label">My Work</p>
+                <h2 class="section-title">Featured <span class="accent">Gallery</span></h2>
+                <p class="section-desc">Explore designs across food, products, and brand campaigns.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-bar reveal" role="tablist" aria-label="Portfolio categories">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button class="filter-btn" data-filter="food" role="tab" aria-selected="false">
+                    <i class="fas fa-utensils"></i> Food &amp; Drinks
+                </button>
+                <button class="filter-btn" data-filter="product" role="tab" aria-selected="false">
+                    <i class="fas fa-box"></i> Products
+                </button>
+                <button class="filter-btn" data-filter="ads" role="tab" aria-selected="false">
+                    <i class="fas fa-bullhorn"></i> Ads &amp; Campaigns
+                </button>
+            </div>
+
+            <!-- Masonry Gallery Grid -->
+            <div class="gallery-grid" id="gallery-grid"></div>
+
+            <!-- Upload Zone -->
+            <div class="uploader reveal" id="uploader" tabindex="0" role="button"
+                aria-label="Upload new project images">
+                <input type="file" id="file-input" accept="image/*" multiple hidden>
+                <div class="upload-content">
+                    <div class="upload-icon-wrap">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>Add New Project</h3>
+                    <p>Drag &amp; drop images here, or <span class="or">browse files</span></p>
+                    <p class="upload-hint"><i class="fas fa-info-circle"></i> Supports JPG, PNG, WEBP</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="about" class="about-section">
+            <div class="about-inner">
+                <div class="about-text reveal">
+                    <p class="section-label">About Me</p>
+                    <h2 class="section-title">Designing with<br><span class="accent">Purpose & Depth</span></h2>
+                    <p class="about-desc">
+                        I'm AHMED.M, a graphic designer passionate about creating visual experiences that
+                        communicate, captivate, and convert. From food brands to product campaigns —
+                        every pixel is intentional.
+                    </p>
+                    <div class="skills-grid">
+                        <div class="skill-pill"><i class="fas fa-paint-brush"></i> Brand Identity</div>
+                        <div class="skill-pill"><i class="fas fa-mobile-alt"></i> Social Media Ads</div>
+                        <div class="skill-pill"><i class="fas fa-cube"></i> 3D Typography</div>
+                        <div class="skill-pill"><i class="fas fa-palette"></i> Color Theory</div>
+                        <div class="skill-pill"><i class="fas fa-layer-group"></i> Composition</div>
+                        <div class="skill-pill"><i class="fas fa-star"></i> Visual Storytelling</div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary" style="margin-top:2rem">
+                        <i class="fas fa-handshake"></i> Work With Me
+                    </a>
+                </div>
+
+                <!-- Floating Tool Badges -->
+                <div class="about-visual reveal">
+                    <div class="tool-planet">
+                        <div class="tool-core">TOOLS</div>
+                        <div class="tool-orbit orbit-1">
+                            <div class="tool-badge" style="--clr:#FF6B6B"><i
+                                    class="fab fa-adobe"></i><span>Photoshop</span></div>
+                        </div>
+                        <div class="tool-orbit orbit-2">
+                            <div class="tool-badge" style="--clr:#00BD7D"><i
+                                    class="fas fa-vector-square"></i><span>Illustrator</span></div>
+                        </div>
+                        <div class="tool-orbit orbit-3">
+                            <div class="tool-badge" style="--clr:#A259FF"><i class="fab fa-figma"></i><span>Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="contact">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="logo">AHMED<span>.M</span></div>
+                <p>Building visuals that tell stories.</p>
+            </div>
+            <div class="footer-center">
+                <h2 class="footer-cta">Let's Create<br><span class="accent">Something Bold</span></h2>
+                <div class="socials">
+                    <a href="https://github.com/" target="_blank" rel="noopener" aria-label="Github"
+                        class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"
+                        class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"
+                        class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="mailto:ahmed@example.com" aria-label="Email" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p class="footer-copy">&copy; 2026 AHMED.M</p>
+                <p class="footer-copy">All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lb-close" id="lb-close" aria-label="Close lightbox"><i class="fas fa-times"></i></button>
+        <button class="lb-prev" id="lb-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+        <button class="lb-next" id="lb-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+        <div class="lb-content">
+            <img id="lb-img" src="" alt="Lightbox preview">
+            <div class="lb-info">
+                <span id="lb-title" class="lb-title"></span>
+                <span id="lb-counter" class="lb-counter"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
