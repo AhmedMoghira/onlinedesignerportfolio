@@ -1,3 +1,8 @@
+// ============================================================
+// AHMED.M Portfolio — script.js
+// ============================================================
+
+// ===== THEME TOGGLE =====
 const themeToggle = document.getElementById('theme-toggle');
 const htmlEl = document.documentElement;
 const themeIcon = themeToggle.querySelector('i');
@@ -14,6 +19,7 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('designer-theme', next);
 });
 
+// ===== MOBILE NAV =====
 const menuBtn    = document.getElementById('menu-btn');
 const mobileNav  = document.getElementById('mobile-nav');
 const closeNav   = document.getElementById('close-nav');
@@ -27,6 +33,7 @@ closeNav.addEventListener('click', closeNavFn);
 navOverlay.addEventListener('click', closeNavFn);
 document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', closeNavFn));
 
+// ===== SCROLL REVEAL =====
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
         if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
@@ -34,30 +41,30 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+// ===== PROJECT DATA =====
+// Each project: { src, title, category }
+// Categories: 'food' | 'product' | 'ads'
 const projects = [
-    { src: 'images/10lemon Juice(1).png',          title: 'Lemon Juice Ad',         category: 'food' },
-    { src: 'images/11chocoberry desgin.png',      title: 'Chocoberry Design',      category: 'food' },
-    { src: 'images/13headphones (1).png',         title: 'Headphones Campaign',    category: 'product' },
-    { src: 'images/15smartWatch.png',             title: 'Smart Watch Ad',         category: 'product' },
-    { src: 'images/18Client1Ad(1).png',           title: 'Client Ad #1',           category: 'ads' },
-    { src: 'images/2 burger design2.jpg',         title: 'Burger Design II',       category: 'food' },
-    { src: 'images/20ShoeAd.png',                 title: 'Shoe Campaign',          category: 'ads' },
-    { src: 'images/22client1Ad2(2).png',          title: 'Client Campaign II',     category: 'ads' },
-    { src: 'images/22clientAd2(3).png',           title: 'Client Campaign III',    category: 'ads' },
-    { src: 'images/29ice cream (1) (5).jpg',      title: 'Ice Cream Visual',       category: 'food' },
-    { src: 'images/30orange juice.jpg',           title: 'Orange Juice Ad',        category: 'food' },
-    { src: 'images/31LEMON juice.jpg',            title: 'Lemon Juice Promo',      category: 'food' },
-    { src: 'images/32BurgerAd.jpg',               title: 'Burger Ad',              category: 'food' },
-    { src: 'images/37Desserts menu.jpg',          title: 'Desserts Menu',          category: 'food' },
-    { src: 'images/4khamsat image4.jpg',         title: 'Khamsat Visual',         category: 'ads' },
-    { src: 'images/5BURGER DESIGN.png',           title: 'Burger Design',          category: 'food' },
-    { src: 'images/7 foods.png',                  title: 'Food Spread',            category: 'food' },
-    { src: 'images/nescafe-poster.svg',           title: 'NESCAFE Coffee',         category: 'food' },
-    { src: 'images/primo-soft-drink.svg',        title: 'Primo Soft Drink',       category: 'food' },
-    { src: 'images/chocolate-poster.svg',        title: 'Chocolate Poster',       category: 'food' },
-    { src: 'images/happy-tuesday-poster.svg',    title: 'Happy Tuesday',          category: 'food' }
+    { src: 'images/10lemon Juice(1).png',          title: 'Lemon Juice Ad',         category: 'food'    },
+    { src: 'images/11chocoberry desgin.png',        title: 'Chocoberry Design',      category: 'food'    },
+    { src: 'images/13headphones (1).png',           title: 'Headphones Campaign',    category: 'product' },
+    { src: 'images/15smartWatch.png',               title: 'Smart Watch Ad',         category: 'product' },
+    { src: 'images/18Client1Ad(1).png',             title: 'Client Ad #1',           category: 'ads'     },
+    { src: 'images/2 burger design2.jpg',           title: 'Burger Design II',       category: 'food'    },
+    { src: 'images/20ShoeAd.png',                   title: 'Shoe Campaign',          category: 'ads'     },
+    { src: 'images/22client1Ad2(2).png',            title: 'Client Campaign II',     category: 'ads'     },
+    { src: 'images/22clientAd2(3).png',             title: 'Client Campaign III',    category: 'ads'     },
+    { src: 'images/29ice cream (1) (5).jpg',        title: 'Ice Cream Visual',       category: 'food'    },
+    { src: 'images/30orange juice.jpg',             title: 'Orange Juice Ad',        category: 'food'    },
+    { src: 'images/31LEMON juice.jpg',              title: 'Lemon Juice Promo',      category: 'food'    },
+    { src: 'images/32BurgerAd.jpg',                 title: 'Burger Ad',              category: 'food'    },
+    { src: 'images/37Desserts menu.jpg',            title: 'Desserts Menu',          category: 'food'    },
+    { src: 'images/4khamsat image4.jpg',            title: 'Khamsat Visual',         category: 'ads'     },
+    { src: 'images/5BURGER DESIGN.png',             title: 'Burger Design',          category: 'food'    },
+    { src: 'images/7 foods.png',                    title: 'Food Spread',            category: 'food'    },
 ];
 
+// ===== GALLERY RENDER =====
 const galleryGrid = document.getElementById('gallery-grid');
 let activeFilter   = 'all';
 let lightboxIndex  = 0;
@@ -81,10 +88,13 @@ function buildGallery(list) {
             </div>
         `;
 
+        // Staggered reveal
         setTimeout(() => item.classList.add('visible'), i * 80);
 
+        // Lightbox open
         item.addEventListener('click', () => openLightbox(i));
 
+        // Subtle tilt on mouse
         item.addEventListener('mousemove', (e) => {
             const r   = item.getBoundingClientRect();
             const rx  = ((e.clientY - r.top)  / r.height - 0.5) * -12;
@@ -102,6 +112,7 @@ function buildGallery(list) {
 
 buildGallery(projects);
 
+// ===== FILTER TABS =====
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-btn').forEach(b => {
@@ -120,6 +131,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     });
 });
 
+// ===== LIGHTBOX =====
 const lightbox = document.getElementById('lightbox');
 const lbImg    = document.getElementById('lb-img');
 const lbTitle  = document.getElementById('lb-title');
@@ -157,6 +169,7 @@ document.getElementById('lb-next').addEventListener('click', () => {
 });
 lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 
+// Keyboard navigation
 document.addEventListener('keydown', (e) => {
     if (!lightbox.classList.contains('active')) return;
     if (e.key === 'Escape')      closeLightbox();
@@ -164,6 +177,7 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') { lightboxIndex = (lightboxIndex + 1) % filteredItems.length; showLightboxItem(); }
 });
 
+// ===== FILE UPLOADER =====
 const uploader  = document.getElementById('uploader');
 const fileInput = document.getElementById('file-input');
 
@@ -223,6 +237,7 @@ function handleFiles(files) {
     });
 }
 
+// ===== SCROLL: Sticky header shadow =====
 window.addEventListener('scroll', () => {
     document.getElementById('header').style.boxShadow =
         window.scrollY > 20 ? '0 4px 20px rgba(0,0,0,0.15)' : '';
