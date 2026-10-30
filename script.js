@@ -45,6 +45,11 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 // Each project: { src, title, category }
 // Categories: 'food' | 'product' | 'ads'
 const projects = [
+    { src: 'images/chocolate-design.png',          title: 'Chocolate Campaign',     category: 'food'    },
+    { src: 'images/mango-juice-design.jpg',         title: 'Mango Juice Ad',          category: 'food'    },
+    { src: 'images/cake-desserts-design.jpg',       title: 'Cake & Desserts',         category: 'food'    },
+    { src: 'images/primo-soft-drink-design.jpg',    title: 'Primo Soft Drink Ad',     category: 'food'    },
+    { src: 'images/nescafe-design.jpg',             title: 'Nescafé Campaign',        category: 'food'    },
     { src: 'images/10lemon Juice(1).png',          title: 'Lemon Juice Ad',         category: 'food'    },
     { src: 'images/11chocoberry desgin.png',        title: 'Chocoberry Design',      category: 'food'    },
     { src: 'images/13headphones (1).png',           title: 'Headphones Campaign',    category: 'product' },
