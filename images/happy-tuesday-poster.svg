@@ -1,0 +1,99 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#494845"/>
+      <stop offset="100%" stop-color="#140f0d"/>
+    </linearGradient>
+    <linearGradient id="cake" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#a16238"/>
+      <stop offset="35%" stop-color="#60421f"/>
+      <stop offset="100%" stop-color="#2e1a10"/>
+    </linearGradient>
+    <linearGradient id="cream" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f6dfc8"/>
+      <stop offset="100%" stop-color="#d7a96e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="18" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+
+  <g transform="translate(50 120)">
+    <g>
+      <circle cx="140" cy="140" r="90" fill="#f3d4d4" opacity="0.2"/>
+      <path d="M60 150C85 120 115 95 150 90C175 128 165 167 140 185C120 205 90 188 70 170C62 166 63 158 60 150Z" fill="#f6d5b2"/>
+      <text x="155" y="150" font-size="48" font-family="Segoe Script, cursive" fill="#f5d9c8">Delicious</text>
+      <text x="155" y="195" font-size="24" font-family="Arial" fill="#f4d9c7" letter-spacing="4">BAKE SHOP</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <path d="M180 410C180 255 310 170 500 170C690 170 810 255 810 410L760 938C760 1008 710 1052 640 1052H390C320 1052 270 1008 270 938L180 410Z" fill="url(#cake)"/>
+      <path d="M230 390C230 290 328 220 500 220C672 220 770 290 770 390C770 460 715 530 660 520C605 510 590 460 540 460C490 460 495 520 430 520C360 520 340 470 290 470C240 470 230 430 230 390Z" fill="#f0d8ba" opacity="0.8"/>
+      <path d="M240 750C350 820 450 820 500 810C570 790 660 820 760 750L760 938C760 995 718 1032 659 1032H340C281 1032 240 995 240 938V750Z" fill="#d9af76" opacity="0.85"/>
+      <path d="M300 650C405 700 440 720 500 712C565 704 630 682 700 650C675 660 640 688 610 720C560 470 440 450 300 650Z" fill="#f0d7b6" opacity="0.6"/>
+      <g fill="#3a2014" opacity="0.9">
+        <ellipse cx="218" cy="440" rx="34" ry="18"/>
+        <ellipse cx="720" cy="426" rx="34" ry="18"/>
+        <ellipse cx="165" cy="560" rx="28" ry="16"/>
+        <ellipse cx="825" cy="665" rx="24" ry="14"/>
+      </g>
+      <g fill="#fff" opacity="0.7">
+        <circle cx="300" cy="300" r="12"/>
+        <circle cx="350" cy="310" r="10"/>
+        <circle cx="409" cy="298" r="14"/>
+        <circle cx="610" cy="315" r="12"/>
+        <circle cx="670" cy="277" r="10"/>
+      </g>
+    </g>
+
+    <g font-family="Arial, Helvetica, sans-serif" fill="#f6f6f6">
+      <text x="500" y="520" text-anchor="middle" font-size="120" font-weight="900">HAPPY</text>
+      <text x="500" y="660" text-anchor="middle" font-size="120" font-weight="900">TUESDAY</text>
+      <text x="500" y="770" text-anchor="middle" font-size="42" font-weight="700">www.yourwebsite.com</text>
+    </g>
+
+    <g transform="translate(875 180)">
+      <rect x="0" y="0" width="230" height="230" rx="26" fill="#f5d4bc" opacity="0.75"/>
+      <circle cx="118" cy="118" r="98" fill="#f9d3a0"/>
+      <circle cx="118" cy="118" r="72" fill="#ebca84"/>
+      <g circle fill="#f3e8d9">
+        <circle cx="70" cy="82" r="10"/>
+        <circle cx="110" cy="52" r="12"/>
+        <circle cx="160" cy="100" r="12"/>
+      </g>
+      <g fill="#e76c1a">
+        <circle cx="86" cy="115" r="10"/>
+        <circle cx="135" cy="134" r="10"/>
+      </g>
+    </g>
+
+    <g transform="translate(875 440)">
+      <rect x="0" y="0" width="230" height="230" rx="26" fill="#f5d4bc" opacity="0.75"/>
+      <rect x="42" y="32" width="150" height="150" rx="24" fill="#f5d9b0"/>
+      <g fill="#f4efef">
+        <circle cx="72" cy="78" r="28"/>
+        <circle cx="160" cy="80" r="28"/>
+        <circle cx="118" cy="140" r="32"/>
+      </g>
+      <g fill="#c4903e">
+        <ellipse cx="113" cy="114" rx="54" ry="86"/>
+      </g>
+      <g fill="#ff8b8b">
+        <circle cx="97" cy="116" r="18"/>
+      </g>
+    </g>
+
+    <g transform="translate(875 720)">
+      <rect x="0" y="0" width="230" height="230" rx="26" fill="#f5d4bc" opacity="0.75"/>
+      <rect x="52" y="52" width="130" height="110" rx="18" fill="#b42a2a"/>
+      <path d="M60 80C80 20 150 20 170 80" fill="#fdf4ee"/>
+      <g fill="#fff" opacity="0.8">
+        <circle cx="82" cy="90" r="12"/>
+        <circle cx="117" cy="88" r="14"/>
+        <circle cx="148" cy="96" r="9"/>
+      </g>
+    </g>
+  </g>
+</svg>

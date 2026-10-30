@@ -1,0 +1,97 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#022f38"/>
+      <stop offset="100%" stop-color="#0f747f"/>
+    </linearGradient>
+    <linearGradient id="canBody" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#3dc2d1"/>
+      <stop offset="25%" stop-color="#6bdbeb"/>
+      <stop offset="100%" stop-color="#116f79"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#d8fbff"/>
+      <stop offset="100%" stop-color="#6aa4b0"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="600" y="120" text-anchor="middle" font-size="88" font-weight="700" fill="#d9f6ff" font-style="italic">REFRESH YOUR MIND</text>
+  </g>
+
+  <g opacity="0.25" fill="#dfeff9">
+    <circle cx="120" cy="350" r="16"/>
+    <circle cx="170" cy="280" r="18"/>
+    <circle cx="240" cy="360" r="12"/>
+    <circle cx="300" cy="260" r="13"/>
+    <circle cx="1080" cy="290" r="18"/>
+    <circle cx="980" cy="330" r="12"/>
+    <circle cx="1040" cy="440" r="16"/>
+    <circle cx="930" cy="230" r="14"/>
+    <circle cx="350" cy="820" r="15"/>
+    <circle cx="190" cy="910" r="20"/>
+    <circle cx="860" cy="960" r="18"/>
+    <circle cx="1030" cy="910" r="12"/>
+  </g>
+
+  <g filter="url(#softShadow)" transform="translate(240 200)">
+    <g transform="rotate(-10 330 440)">
+      <rect x="130" y="150" width="420" height="520" rx="60" fill="url(#canBody)"/>
+      <rect x="170" y="120" width="340" height="80" rx="18" fill="#10384d" opacity="0.8"/>
+      <rect x="287" y="80" width="110" height="90" rx="18" fill="#eafcff" opacity="0.2"/>
+      <rect x="168" y="210" width="324" height="360" rx="38" fill="rgba(34,93,105,0.2)"/>
+      <circle cx="310" cy="285" r="50" fill="rgba(255,255,255,0.12)"/>
+      <circle cx="350" cy="260" r="16" fill="rgba(255,255,255,0.16)"/>
+      <ellipse cx="300" cy="510" rx="155" ry="55" fill="rgba(0,0,0,0.08)"/>
+      <g opacity="0.75">
+        <circle cx="315" cy="323" r="20" fill="#d3f3fd"/>
+        <circle cx="355" cy="324" r="20" fill="#d3f3fd"/>
+        <circle cx="279" cy="390" r="20" fill="#d3f3fd"/>
+        <circle cx="360" cy="390" r="18" fill="#d3f3fd"/>
+        <circle cx="320" cy="440" r="22" fill="#d3f3fd"/>
+      </g>
+      <g fill="rgba(255,255,255,0.25)">
+        <circle cx="220" cy="375" r="16"/>
+        <circle cx="440" cy="330" r="12"/>
+        <circle cx="250" cy="470" r="18"/>
+        <circle cx="410" cy="480" r="16"/>
+      </g>
+      <g fill="rgba(8,64,79,0.25)">
+        <circle cx="243" cy="290" r="13"/>
+        <circle cx="382" cy="420" r="12"/>
+      </g>
+    </g>
+  </g>
+
+  <g font-family="'Segoe Print', 'Comic Sans MS', cursive" font-weight="700" fill="#d8f7ff" opacity="0.8">
+    <text x="600" y="670" text-anchor="middle" font-size="150">Primo</text>
+  </g>
+
+  <g fill="#d8f7ff" opacity="0.9" font-family="'Segoe Script', cursive" font-size="68">
+    <text x="600" y="950" text-anchor="middle">soft drink</text>
+  </g>
+
+  <g opacity="0.95">
+    <g transform="translate(80 140) rotate(-24)">
+      <rect x="0" y="0" width="80" height="80" fill="#d9f8ff"/>
+      <rect x="10" y="10" width="60" height="60" fill="#93dfe8" opacity="0.75"/>
+    </g>
+    <g transform="translate(930 160) rotate(18)">
+      <rect x="0" y="0" width="80" height="80" fill="#d9f8ff"/>
+      <rect x="10" y="10" width="60" height="60" fill="#93dfe8" opacity="0.75"/>
+    </g>
+    <g transform="translate(920 760) rotate(8)">
+      <rect x="0" y="0" width="120" height="120" fill="#d9f8ff"/>
+      <rect x="17" y="17" width="86" height="86" fill="#a8edf8" opacity="0.75"/>
+    </g>
+    <g transform="translate(150 900) rotate(-12)">
+      <rect x="0" y="0" width="110" height="110" fill="#d9f8ff"/>
+      <rect x="15" y="15" width="80" height="80" fill="#a8edf8" opacity="0.75"/>
+    </g>
+  </g>
+</svg>
